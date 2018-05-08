@@ -127,13 +127,13 @@ fi
 ##############################################################################################################
 ### homebrew!
 
-# (if your machine has /usr/local locked down (like google's), you can do this to place everything in ~/.homebrew
-mkdir $HOME/.homebrew && curl -L https://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C $HOME/.homebrew
-export PATH=$HOME/.homebrew/bin:$HOME/.homebrew/sbin:$PATH
+# # (if your machine has /usr/local locked down (like google's), you can do this to place everything in ~/.homebrew
+# mkdir $HOME/.homebrew && curl -L https://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C $HOME/.homebrew
+# export PATH=$HOME/.homebrew/bin:$HOME/.homebrew/sbin:$PATH
 
-# install all the things
-./brew.sh
-./brew-cask.sh
+# # install all the things
+# ./brew.sh
+# ./brew-cask.sh
 
 ### end of homebrew
 ##############################################################################################################
@@ -174,7 +174,7 @@ git clone https://github.com/rupa/z.git ~/code/z
 
 # github.com/thebitguru/play-button-itunes-patch
 # disable itunes opening on media keys
-git clone https://github.com/thebitguru/play-button-itunes-patch ~/code/play-button-itunes-patch
+# git clone https://github.com/thebitguru/play-button-itunes-patch ~/code/play-button-itunes-patch
 
 
 # my magic photobooth symlink -> dropbox. I love it.
@@ -214,17 +214,17 @@ ln -sf "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/su
 # improve perf of git inside of chromium checkout
 # https://chromium.googlesource.com/chromium/src/+/master/docs/mac_build_instructions.md
 
-# default is (257*1024)
-sudo sysctl kern.maxvnodes=$((512*1024))
+# # default is (257*1024)
+# sudo sysctl kern.maxvnodes=$((512*1024))
 
-echo kern.maxvnodes=$((512*1024)) | sudo tee -a /etc/sysctl.conf
+# echo kern.maxvnodes=$((512*1024)) | sudo tee -a /etc/sysctl.conf
 
-# speed up git status (to run only in chromium repo)
-git config status.showuntrackedfiles no
-git update-index --untracked-cache
+# # speed up git status (to run only in chromium repo)
+# git config status.showuntrackedfiles no
+# git update-index --untracked-cache
 
-# also this unrelated thing
-git config user.email "paulirish@chromium.org"
+# # also this unrelated thing
+# git config user.email "carliecope@gmail.com"
 
 
 ##############################################################################################################
@@ -238,7 +238,7 @@ git config user.email "paulirish@chromium.org"
 
 # set up osx defaults
 #   maybe something else in here https://github.com/hjuutilainen/dotfiles/blob/master/bin/osx-user-defaults.sh
-sh .osx
+# sh .osx
 
 # setup and run Rescuetime!
 
@@ -255,7 +255,7 @@ sh .osx
 #   now .gitconfig can be shared across all machines and only the .local changes
 
 # symlink it up!
-./symlink-setup.sh
+# ./symlink-setup.sh
 
 # add manual symlink for .ssh/config and probably .config/fish
 
