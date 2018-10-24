@@ -179,6 +179,11 @@ alias update_brew_npm_gem='brew_update; npm install npm -g; npm update -g; sudo 
 
 # The Lab Stuff 
 alias cdp='cd Projects';
-alias du='./bin/dcd up';
 alias dj='./bin/dcd run --rm web ./manage.py';
 alias dbs='./bin/bootstrap-dev.sh';
+
+# Start dev env with remote server
+alias start-dev="tmux -CC new-session 'accordance sync ~/.accordance/projects.yml' \; split-window 'sshuttle -r ccopeland@ccopeland.builds.tsiaws.com 172.17.0.0/16'"
+
+# AWS Vault
+alias vaws='aws-vault exec ${AWS_DEFAULT_PROFILE:-tsi} -- aws '
